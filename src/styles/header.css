@@ -1,0 +1,82 @@
+.header {
+  font-family: 'Montserrat';
+  background-color: $black;
+  color: $white;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.header--light {
+  background-color: $white;
+  color: $black;
+}
+.header-mobile {
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  order: 1;
+  margin-left: 1rem;
+  padding: 0;
+  line-height: 64px;
+}
+.header-btn-nav {
+  display: block;
+  order: 2;
+  border: 0;
+  border-radius: 0.4em;
+  background-color: $black;
+  color: $white;
+  padding: 0;
+  margin: 1em;
+}
+.header-menu-navbar {
+  background-color: $black;
+}
+.header-menu-list {
+  list-style-type: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.header-menu-list--show {
+  height: 280px;
+}
+.header-menu-list-item a {
+  text-decoration: none;
+  color: $white;
+  width: 100%;
+  padding: 1.5em;
+  display: block;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 80px;
+    transition: all 0.3s ease;
+    line-height: 80px;
+  }
+  .header-logo {
+    margin-right: 2rem;
+  }
+  .header-btn-nav {
+    display: none;
+  }
+  .header-menu-list {
+    height: 80px;
+  }
+  .header-menu-list-item {
+    display: inline-block;
+  }
+  .header-menu-list-item a {
+    padding: 0 1em;
+  }
+}
